@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Experience five-star hotel luxury at Stein Eriksen Lodge, the Park City Resort with world-renowned skiing."
+    />
+    <meta
+      name="keywords"
+      content="luxury hotel, five-star hotel, luxury hotel at Stein Eriksen Lodge, Best Ski Hotel "
+    />
+    <meta
+      name="author"
+      content="Wael Ahmad Alghamdi and Abdulaziz Talaq Alsulami"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="text/javascript" src="js/site.js"></script>
+    <title>SEVL | Feedback</title>
+  </head>
+  <body>
+    <!--  -->
+    <div class="header">
+      <div class="header-container">
+        <img
+          alt="logo of Stein Eriksen Lodge Deer Valley"
+          src="images/logo.png"
+        />
+      </div>
+      <div class="header-container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="add-new-apartment-record.html">Add New Apartment Record</a>
+          </li>
+          <li><a href="browse_apartment_record">Apartments Records</a></li>
+          <li><a class="active" href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--  -->
+    <div id="title">
+      <h1>Add Feedback</h1>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="add-apartment-background">
+      <div class="add-apartment-container">
+        <div id="regform">
+          <h1>Add Feedback Form</h1>
+          <hr />
+        </div>
+        <form
+          action="insert_feedback_record"
+          method="post"
+          onsubmit="return validateFeedback()"
+        >
+          <!--  -->
+          <div class="item">
+            <label>
+              <div class="lbl">
+                Name: *
+                <span class="error" id="errName"> </span>
+              </div>
+              <input
+                id="name"
+                class="inputBox"
+                type="text"
+                name="name"
+                placeholder="Enter your name ..."
+              />
+            </label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <label>
+              <div class="lbl">
+                Phone: *
+                <span class="error" id="errPhone"> </span>
+              </div>
+              <input
+                id="phone"
+                class="inputBox"
+                type="text"
+                name="phone"
+                placeholder="Enter your phone ..."
+              />
+            </label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <label>
+              <div class="lbl">
+                Email: *
+                <span class="error" id="errEmail"> </span>
+              </div>
+              <input
+                id="email"
+                class="inputBox"
+                type="text"
+                name="email"
+                placeholder="Enter your email adddress ..."
+              />
+            </label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <label>
+              <div class="lbl">
+                Subject: *
+                <span class="error" id="errSubject"> </span>
+              </div>
+              <input
+                id="subject"
+                class="inputBox"
+                type="text"
+                name="subject"
+                placeholder="Enter your subject ..."
+              />
+            </label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <label>
+              <div class="lbl">
+                Type: *
+                <span class="error" id="errType"> </span>
+              </div>
+              <select id="type" class="inputBox" name="type">
+                <option>Please select a type...</option>
+                <option>Suggestion</option>
+                <option>Complaint</option>
+                <option>Idea</option>
+                <option>Help</option>
+              </select>
+            </label>
+          </div>
+          <!--  -->
+          <div class="item">
+            <div class="lbl">
+              Message: *
+              <span class="error" id="errMessage"> </span>
+            </div>
+            <textarea
+              id="message"
+              rows="15"
+              cols="100"
+              class="textareaBox"
+              name="message"
+              placeholder="Enter your message here..."
+            ></textarea>
+          </div>
+          <!--  -->
+          <div class="item">
+            <input id="submitBtn" type="submit" value="Send" />
+          </div>
+        </form>
+      </div>
+    </div>
+   <!--  -->
+        <div class="footer">
+            <ul>
+                <li><p>Stein Eriksen Lodge Deer Valley</p></li>
+                <span class="f-d"> | </span>
+                <li><p>7700 Stein Way</p></li>
+                <span class="f-d"> | </span>
+                <li>
+                    <p>​Park City, Utah 84060 Reservations: (866) 996-0034</p>
+                </li>
+                <span class="f-d"> | </span>
+                <li>
+                    <p>Email: info@steinlodge.com​ NOTICE OF ACCESSIBILITY</p>
+                </li>
+                <div></div>
+                <li class="footer-li"><p>PRIVACY POLICY TERMS & CONDITIONS</p></li>
+                <span class="f-d"> | </span>
+                <li>
+                    <p>CANCELLATION POLICY TRAVEL INFORMATION Stein Eriksen Lodge Deer Valley</p> 
+                </li>
+                <span class="f-d"> | </span>
+                <li>
+                    <p>Copyright © 2022 by Wael Ahmad Alghamdi & Abdulaziz Talaq Alsulami.</p> 
+                </li>
+            </ul>
+        </div>
+    <!--  -->
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>process_add_apartment_record_form</servlet-name>
+        <servlet-class>process_add_apartment_record_form</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>process_feedback_form</servlet-name>
+        <servlet-class>process_feedback_form</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>process_apartment_record_browse</servlet-name>
+        <servlet-class>process_apartment_record_browse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>process_add_apartment_record_form</servlet-name>
+        <url-pattern>/insert_apartment_record</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>process_feedback_form</servlet-name>
+        <url-pattern>/insert_feedback_record</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>process_apartment_record_browse</servlet-name>
+        <url-pattern>/browse_apartment_record</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="Experience five-star hotel luxury at Stein Eriksen Lodge, the Park City Resort with world-renowned skiing."
+            />
+        <meta
+            name="keywords"
+            content="luxury hotel, five-star hotel, luxury hotel at Stein Eriksen Lodge, Best Ski Hotel "
+            />
+        <meta
+            name="author"
+            content="Wael Ahmad Alghamdi and Abdulaziz Talaq Alsulami"
+            />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <script type="text/javascript" src="js/site.js"></script>
+
+        <title>SEVL | Add New Apartment Record</title>
+    </head>
+    <body>
+        <!--  -->
+        <div class="header">
+            <div class="header-container">
+                <img
+                    alt="logo of Stein Eriksen Lodge Deer Valley"
+                    src="images/logo.png"
+                    />
+            </div>
+            <div class="header-container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a class="active" href="add-new-apartment-record.html"
+                           >Add New Apartment Record</a
+                        >
+                    </li>
+                    <li><a href="browse_apartment_record">Apartments Records</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--  -->
+        <div id="title">
+            <h1>Add New Apartment Record</h1>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div class="add-apartment-background">
+            <div class="add-apartment-container">
+                <div id="regform">
+                    <h1>Add New Apartment Record Form</h1>
+                    <hr />
+                </div>
+                <form
+                    action="insert_apartment_record"
+                    method="post"
+                    onsubmit="return validateAddNewApartmen()"
+                    >
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Apartment Number: *
+                                <span class="error" id="errApartmentnumber"> </span>
+                            </div>
+                            <input
+                                id="apartmentnumber"
+                                class="inputBox"
+                                type="text"
+                                name="apartmentnumber"
+                                placeholder="Enter the apartment number..."
+                                />
+                        </label>
+                    </div>
+                    <!--  -->
+
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Floor Number: *
+                                <span class="error" id="errFloornumber"> </span>
+                            </div>
+                            <select id="floornumber" class="inputBox" name="floornumber">
+                                <option>Please select the floor number...</option>
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Number Of Rooms: *
+                                <span class="error" id="errNumberofrooms"> </span>
+                            </div>
+                            <input
+                                id="numberofrooms"
+                                class="inputBox"
+                                type="text"
+                                name="numberofrooms"
+                                placeholder="Enter the number of rooms..."
+                                />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Occupied: *<span id="span-for-hint"
+                                                 >(Vacant [0] | Occupied [1])
+                                </span>
+                                <span class="error" id="errOccupied"> </span>
+                            </div>
+                            <select id="occupied" class="inputBox" name="occupied">
+                                <option>Please select 0 or 1...</option>
+                                <option>0</option>
+                                <option>1</option>
+                            </select>
+                        </label>
+                    </div>
+                    <!--  -->
+            
+                     <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Price: *
+                                <span class="error" id="errPrice"> </span>
+                            </div>
+                            <input
+                                id="price"
+                                class="inputBox"
+                                type="text"
+                                name="price"
+                                placeholder="Enter the price..."
+                                />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Payment:
+                                <span class="error" id="errPayment"> </span>
+                            </div>
+                            <input
+                                id="payment"
+                                class="inputBox"
+                                type="text"
+                                name="payment"
+                                placeholder="Enter the payment..."
+                                />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Payment DateTime:
+                                <span id="span-for-hint">(dd mm yyyy) </span>
+                                <span class="error" id="errPaymentdatetime"> </span>
+                            </div>
+                            <input
+                                id="paymentdatetime"
+                                class="inputBox"
+                                type="text"
+                                name="paymentdatetime"
+                                placeholder="dd mm yyyy"
+                                />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Rent Start Date:
+                                <span id="span-for-hint">(dd mm yyyy) </span>
+                                <span class="error" id="errRentstartdate"> </span>
+                            </div>
+                            <input
+                                id="rentstartdate"
+                                class="inputBox"
+                                type="text"
+                                name="rentstartdate"
+                                placeholder="dd mm yyyy"
+                                />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Rent End Date:
+                                <span id="span-for-hint">(dd mm yyyy) </span>
+                                <span class="error" id="errRentenddate"> </span>
+                            </div>
+                            <input
+                                id="rentenddate"
+                                class="inputBox"
+                                type="text"
+                                name="rentenddate"
+                                placeholder="dd mm yyyy"
+                                />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Renter National ID:
+                                <span class="error" id="errRenternationalid"> </span>
+                            </div>
+                            <input
+                                id="renternationalid"
+                                class="inputBox"
+                                type="text"
+                                name="renternationalid"
+                                placeholder="Enter the renter national id..."/>
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <label>
+                            <div class="lbl">
+                                Renter Name:
+                                <span class="error" id="errRentername"> </span>
+                            </div>
+                            <input
+                                id="rentername"
+                                class="inputBox"
+                                type="text"
+                                name="rentername"
+                                placeholder="Enter the renter name..."
+                                />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="item">
+                        <input id="submitBtn" type="submit" value="ADD" />
+                    </div>
+
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="footer">
+            <ul>
+                <li><p>Stein Eriksen Lodge Deer Valley</p></li>
+                <span class="f-d"> | </span>
+                <li><p>7700 Stein Way</p></li>
+                <span class="f-d"> | </span>
+                <li>
+                    <p>​Park City, Utah 84060 Reservations: (866) 996-0034</p>
+                </li>
+                <span class="f-d"> | </span>
+                <li>
+                    <p>Email: info@steinlodge.com​ NOTICE OF ACCESSIBILITY</p>
+                </li>
+                <div></div>
+                <li class="footer-li"><p>PRIVACY POLICY TERMS & CONDITIONS</p></li>
+                <span class="f-d"> | </span>
+                <li>
+                    <p>CANCELLATION POLICY TRAVEL INFORMATION Stein Eriksen Lodge Deer Valley</p> 
+                </li>
+                <span class="f-d"> | </span>
+                <li>
+                    <p>Copyright © 2022 by Wael Ahmad Alghamdi & Abdulaziz Talaq Alsulami.</p> 
+                </li>
+            </ul>
+        </div>
+        <!--  -->
+    </body>
+</html>
+

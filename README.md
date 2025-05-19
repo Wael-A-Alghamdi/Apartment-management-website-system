@@ -2,6 +2,9 @@
 
 A basic web-based hotel management system built using Java EE and MySQL. This project includes web pages for room/apartment records, customer feedback, and a supporting database schema.
 
+🔗 Live Demo
+[Demo of the website](https://wael-a-alghamdi.github.io/Apartment-management-website-system/HotelInformationSystem/web/index.html)
+
 ---
 
 🔧 Tech Used  

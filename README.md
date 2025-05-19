@@ -1,4 +1,4 @@
-# Hotel Information System
+# Apartment Management System
 
 A basic web-based hotel management system built using Java EE and MySQL. This project includes web pages for room/apartment records, customer feedback, and a supporting database schema.
 
